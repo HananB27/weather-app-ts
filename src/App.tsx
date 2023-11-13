@@ -1,26 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
+import WeatherFetcher from './WeatherFetcher';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-200 min-h-screen p-8">
+      <h1 className="text-3xl font-bold mb-8">Weather App</h1>
+      <WeatherFetcher latitude={43.8486} longitude={18.3564} />
     </div>
   );
-}
+};
 
 export default App;
